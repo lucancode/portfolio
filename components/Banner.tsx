@@ -9,8 +9,8 @@ function Banner() {
 
   React.useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["Frontend Developer", "Backend Developer"],
-      typeSpeed: 50,
+      strings: ["Fullstack Developer"],
+      typeSpeed: 70,
     });
 
     return () => {
@@ -20,24 +20,18 @@ function Banner() {
   }, []);
 
   return (
-    <div className=" relative flex justify-between items-center w-full h-dvh p-[100px]">
+    <div className=" relative flex justify-between items-center w-full h-dvh">
       <div className=" max-w-[850px] space-y-4">
         {/** subtleText is a custom utility for keyframe animation */}
-        <h3 className="text-2xl font-bold subtleText">Hello, It's</h3>
+        <h3 className="text-2xl font-bold subtleText">Hello, My Name Is</h3>
         {/** myName is a custom utility for keyframe animation */}
         <h1 className="text-6xl font-bold myName">Lungelo Ntuli</h1>
         {/** subtleText is a custom utility for keyframe animation */}
         <h3 className="text-3xl font-bold subtleText">
-          And I'm a <span ref={el} className=" text-red-400"></span>
+          And I'm a <span ref={el} className=" text-blue-400"></span>
         </h3>
         <p className="text-xl description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+        Dynamic Software Engineer | Network Engineer | Certified in Cybersecurity by ISC2 | Aspiring Technologist at the Intersection of Code and Security
         </p>
         <div className="flex space-x-4 socials">
           <Link
@@ -56,14 +50,14 @@ function Banner() {
         <div className="pt-8 cvBtn">
           <a
             href=""
-            className="bg-red-400 rounded p-4 transition duration-400 ease-in-out hover:bg-red-800 hover:bg-opacity-65"
+            className="bg-blue-400 rounded p-4 transition duration-400 ease-in-out hover:bg-blue-800 hover:bg-opacity-65"
           >
             Download Resume
           </a>
         </div>
       </div>
       <div className="w-[550px] h-[550px] img">
-        <img src="https://as1.ftcdn.net/v2/jpg/06/34/17/74/1000_F_634177451_9FJMzIBVJLHqZn3rcArq3fb9GG9FMGIK.jpg" className="w-full h-full rounded-full object-cover" alt="" />
+        <img src="grad.jpg" className="w-full h-full rounded-full object-cover" alt="" />
       </div>
     </div>
   );
