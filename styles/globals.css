@@ -31,21 +31,39 @@ body {
     text-wrap: balance;
   }
   .subtleText:nth-child(1) {
-    animation: scrollInBottom 2s ease forwards;
-    animation-duration: .6s;
+    animation: slideToRight 2s ease forwards;
+    animation-duration: 0.6s;
   }
   .subtleText:nth-child(3) {
-    animation: scrollInBottom 2s ease forwards;
+    animation: slideToRight 2s ease forwards;
     animation-duration: 1s;
   }
   .myName {
-    animation: scrollInTop 2s ease backwards;
-    animation-duration: .7s;
-    animation-delay: .8s;
+    animation: slideToTop 2s ease backwards;
+    animation-duration: 0.7s;
+    animation-delay: 0.8s;
+  }
+  .description {
+    animation: slideToLeft 0.2s ease forwards;
+    animation-duration: 1.2s;
+  }
+  .socials {
+    animation: slideToBottom 0.2s ease backwards;
+    animation-duration: 1.5s;
+  }
+  .cvBtn {
+    animation: slideToLeft 0.2s ease backwards;
+    animation-duration: 1.5s;
+  }
+  .img {
+    opacity: 0;
+    animation: zoomIn .2s ease forwards;
+    animation-duration: 1.2s;
+    animation-delay: .5s;
   }
 }
 
-@keyframes scrollInBottom {
+@keyframes slideToRight {
   0% {
     transform: translateX(-100px);
     opacity: 0;
@@ -56,13 +74,46 @@ body {
   }
 }
 
-@keyframes scrollInTop {
+@keyframes slideToTop {
   0% {
     transform: translateY(50px);
     opacity: 0;
   }
   100% {
     transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideToLeft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideToBottom {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    scale: 0;
+    opacity: 0;
+  }
+  100% {
+    scale: 1;
     opacity: 1;
   }
 }

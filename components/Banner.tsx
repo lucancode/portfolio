@@ -39,7 +39,7 @@ function Banner() {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
-        <div className="flex space-x-4 hover:">
+        <div className="flex space-x-4 socials">
           <Link
             href="https://linkedin.com"
             className="rounded-full p-2 transition duration-400 ease-in-out hover:bg-white hover:bg-opacity-65"
@@ -53,7 +53,7 @@ function Banner() {
             <FaGithub className="h-6 w-6" />
           </Link>
         </div>
-        <div className="pt-8">
+        <div className="pt-8 cvBtn">
           <a
             href=""
             className="bg-red-400 rounded p-4 transition duration-400 ease-in-out hover:bg-red-800 hover:bg-opacity-65"
@@ -62,8 +62,8 @@ function Banner() {
           </a>
         </div>
       </div>
-      <div className="max-w-[450px]">
-        <img src="next.svg" className="rounded-full" alt="" />
+      <div className="w-[550px] h-[550px] img">
+        <img src="https://as1.ftcdn.net/v2/jpg/06/34/17/74/1000_F_634177451_9FJMzIBVJLHqZn3rcArq3fb9GG9FMGIK.jpg" className="w-full h-full rounded-full object-cover" alt="" />
       </div>
     </div>
   );

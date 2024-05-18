@@ -2,6 +2,7 @@ import { Poppins } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Banner from "@/components/Banner";
 import Head from "next/head";
+import About from "@/components/About";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "700"] });
 
@@ -14,8 +15,8 @@ export default function Home() {
         <title>Welcome to the Portfolio for Lungelo Ntuli</title>
         <link rel="icon" href="" />
       </Head>
-      <Navbar />
       <Banner />
+      <About />
     </main>
   );
 }
