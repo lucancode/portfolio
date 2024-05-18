@@ -30,4 +30,39 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  .subtleText:nth-child(1) {
+    animation: scrollInBottom 2s ease forwards;
+    animation-duration: .6s;
+  }
+  .subtleText:nth-child(3) {
+    animation: scrollInBottom 2s ease forwards;
+    animation-duration: 1s;
+  }
+  .myName {
+    animation: scrollInTop 2s ease backwards;
+    animation-duration: .7s;
+    animation-delay: .8s;
+  }
+}
+
+@keyframes scrollInBottom {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scrollInTop {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

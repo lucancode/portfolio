@@ -1,17 +1,36 @@
 import Link from "next/link";
 import React from "react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import Typed from "typed.js";
 
 function Banner() {
+  // Create reference to store the DOM element containing the animation
+  const el = React.useRef(null);
+
+  React.useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: ["Frontend Developer", "Backend Developer"],
+      typeSpeed: 50,
+    });
+
+    return () => {
+      // Destroy Typed instance during cleanup to stop animation
+      typed.destroy();
+    };
+  }, []);
+
   return (
     <div className=" relative flex justify-between items-center w-full h-dvh p-[100px]">
       <div className=" max-w-[850px] space-y-4">
-        <h3 className="text-2xl font-bold">Hello, It's</h3>
-        <h1 className="text-6xl font-bold">Lungelo Ntuli</h1>
-        <h3 className="text-3xl font-bold">
-          And I'm a <span className=" text-red-400">Fullstack Developer</span>
+        {/** subtleText is a custom utility for keyframe animation */}
+        <h3 className="text-2xl font-bold subtleText">Hello, It's</h3>
+        {/** myName is a custom utility for keyframe animation */}
+        <h1 className="text-6xl font-bold myName">Lungelo Ntuli</h1>
+        {/** subtleText is a custom utility for keyframe animation */}
+        <h3 className="text-3xl font-bold subtleText">
+          And I'm a <span ref={el} className=" text-red-400"></span>
         </h3>
-        <p className="text-xl">
+        <p className="text-xl description">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
