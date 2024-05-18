@@ -12,7 +12,7 @@ function Navbar() {
         </div>
         {/** navbar links */}
         <div className="flex space-x-10 cursor-pointer text-lg font-semibold">
-          <h4>Home</h4>
+          <a href="./" className="text-red-400">Home</a>
           <h4>About</h4>
           <h4>Skills</h4>
           <h4>Projects</h4>
