@@ -1,21 +1,23 @@
-import React from "react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 function Navbar() {
   return (
     // navigation bar container
-    <div className=" absolute flex justify-center items-center top-0 left-0 w-full p-10">
+    <div className="absolute flex justify-center items-center top-4 left-0 w-full p-12 z-10">
       {/** navbar content */}
-      <nav className="flex justify-between items-center w-full px-16">
+      <nav className="fixed flex justify-between items-center w-full px-24">
         {/** navbar logo */}
         <div className="logo">
           <h2 className="font-extrabold text-2xl cursor-pointer">LUCANCODE</h2>
         </div>
         {/** navbar links */}
         <div className="flex space-x-10 cursor-pointer text-lg font-semibold">
-          <a href="./" className="text-red-400">Home</a>
-          <h4>About</h4>
-          <h4>Skills</h4>
-          <h4>Projects</h4>
+          <Link href="./" className="text-blue-400">
+            Home
+          </Link>
+          <Link href="#about">About</Link>
+          <Link href="#projects">Projects</Link>
         </div>
       </nav>
       {/** ends navbar */}
