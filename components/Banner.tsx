@@ -20,7 +20,7 @@ function Banner() {
   }, []);
 
   return (
-    <div className=" relative flex justify-between items-center w-full h-dvh">
+    <div className="relative flex justify-between items-center w-full h-dvh">
       <div className=" max-w-[850px] space-y-4">
         {/** subtleText is a custom utility for keyframe animation */}
         <h3 className="text-2xl font-bold subtleText">Hello, My Name Is</h3>
@@ -31,8 +31,11 @@ function Banner() {
           And I'm a <span ref={el} className=" text-blue-400"></span>
         </h3>
         <p className="text-xl description">
-        Dynamic Software Engineer | Network Engineer | Certified in Cybersecurity by ISC2 | Aspiring Technologist at the Intersection of Code and Security
+          Dynamic Software Engineer | Network Engineer | Certified in
+          Cybersecurity by ISC2 | Aspiring Technologist at the Intersection of
+          Code and Security
         </p>
+        {/** banner social media and button block */}
         <div className="flex space-x-4 socials">
           <Link
             href="https://linkedin.com"
@@ -56,8 +59,28 @@ function Banner() {
           </a>
         </div>
       </div>
+      {/** img class is for the keyframe animation opacity/float effect */}
       <div className="w-[550px] h-[550px] img">
-        <img src="grad.jpg" className="w-full h-full rounded-full object-cover" alt="" />
+        {/** I used an svg to create an interesting container for the image */}
+        <svg viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg">
+          <mask id="mask0" mask-type="alpha">
+            <path
+              d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+        130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+        97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+        0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
+            />
+          </mask>
+          <g mask="url(#mask0)">
+            <path
+              d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+        165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+        129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+        -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
+            />
+            <image href="grad.jpg" className="w-full -translate-y-8" />
+          </g>
+        </svg>
       </div>
     </div>
   );
