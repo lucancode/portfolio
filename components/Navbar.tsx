@@ -22,7 +22,7 @@ function Navbar() {
           </h2>
         </div>
         {/** start navbar links */}
-        <div className="hidden md:flex space-x-10 cursor-pointer text-lg font-semibold">
+        <div className="hidden lg:flex space-x-10 cursor-pointer text-lg font-semibold">
           <Link href="./" className="text-blue-400">
             Home
           </Link>
@@ -31,7 +31,7 @@ function Navbar() {
         </div>
         {/** end navbar links */}
         {/** start hamburger menu */}
-        <div className={`md:hidden block menu`} onClick={showMenu}>
+        <div className={`lg:hidden block cursor-pointer menu`} onClick={showMenu}>
           <span></span>
           <span></span>
           <span></span>

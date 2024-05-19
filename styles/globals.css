@@ -166,3 +166,28 @@ body::-webkit-scrollbar {
     transform: translateY(0);
   }
 }
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 2s ease-in-out, scale 4s ease-in-out;
+}
+
+.fade-in.visible {
+  scale: 1;
+  opacity: 1;
+  animation: slideToLeft 0.2s ease forwards;
+  animation-duration: 2s;
+}
+
+.slide-Right.visible {
+  animation: slideToRight 0.2s ease forwards;
+  animation-duration: 1.5s;
+}
+.slide-Left.visible {
+  animation: slideToLeft 0.2s ease forwards;
+  animation-duration: 1.5s;
+}
+.slide-Bottom.visible {
+  animation: slideToBottom 0.2s ease forwards;
+  animation-duration: 1.5s;
+}
