@@ -1,5 +1,4 @@
-import Tooltip from "@mui/material/Tooltip";
-import * as React from "react";
+import { Tooltip } from "@mui/material";
 import { useEffect, useRef, RefObject } from "react";
 import { DiMysql } from "react-icons/di";
 import {
@@ -29,31 +28,30 @@ const skills = [
   { label: "JavaScript", icon: IoLogoJavascript },
   { label: "Flutter", icon: TbBrandFlutter },
   { label: "MySQL", icon: DiMysql },
-  { label: "TypeScript", icon: SiTypescript }
+  { label: "TypeScript", icon: SiTypescript },
 ];
 function About() {
-  
   const useFadeInOnScroll = (elementRefs: RefObject<HTMLElement>[]) => {
     useEffect(() => {
       const handleScroll = () => {
-        elementRefs.forEach(ref => {
+        elementRefs.forEach((ref) => {
           if (ref.current) {
             const rect = ref.current.getBoundingClientRect();
             const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
             if (isVisible) {
-              ref.current.classList.add('visible');
+              ref.current.classList.add("visible");
             } else {
-              ref.current.classList.remove('visible');
+              ref.current.classList.remove("visible");
             }
           }
         });
       };
-  
-      window.addEventListener('scroll', handleScroll);
+
+      window.addEventListener("scroll", handleScroll);
       handleScroll(); // Check visibility on initial render
-  
+
       return () => {
-        window.removeEventListener('scroll', handleScroll);
+        window.removeEventListener("scroll", handleScroll);
       };
     }, [elementRefs]);
   };
@@ -62,20 +60,25 @@ function About() {
     useRef<HTMLDivElement>(null),
     useRef<HTMLDivElement>(null),
     useRef<HTMLDivElement>(null),
-    useRef<HTMLDivElement>(null)
+    useRef<HTMLDivElement>(null),
   ];
 
   useFadeInOnScroll(fadeInSectionRefs);
-useFadeInOnScroll(fadeInSectionRefs);
+  useFadeInOnScroll(fadeInSectionRefs);
 
   return (
     <div className="relative top-o left-0 w-full">
       <h2 className="mt-40 font-bold text-2xl text-center md:mt-0">About Me</h2>
-      <div className="py-8">
+      <div className="my-8">
         <div className="grid-cols-3 gap-8 justify-items-center md:grid md:grid-cols-2">
           <div className="intro mb-10">
-            <h4 ref={fadeInSectionRefs[0]} className="slide-Bottom font-bold text-lg mb-5">Introduction</h4>
-            <p ref={fadeInSectionRefs[1]} className="slide-Right" >
+            <h4
+              ref={fadeInSectionRefs[0]}
+              className="slide-Bottom font-bold text-lg mb-5"
+            >
+              Introduction
+            </h4>
+            <p ref={fadeInSectionRefs[1]} className="slide-Right">
               A software developer from the Nelson Mandela University who
               effectively applies theoretical knowledge to excel in mastering
               new technologies. Demonstrates strong analytical and
@@ -83,8 +86,16 @@ useFadeInOnScroll(fadeInSectionRefs);
             </p>
           </div>
           <div className="">
-            <h4 ref={fadeInSectionRefs[2]} className="slide-Bottom font-bold text-lg mb-5">Skills</h4>
-            <div ref={fadeInSectionRefs[3]} className="slide-Left grid grid-cols-3 gap-7 justify-items-center md:grid-cols-3 lg:grid-cols-7">
+            <h4
+              ref={fadeInSectionRefs[2]}
+              className="slide-Bottom font-bold text-lg mb-5"
+            >
+              Skills
+            </h4>
+            <div
+              ref={fadeInSectionRefs[3]}
+              className="slide-Left grid grid-cols-3 gap-7 justify-items-center md:grid-cols-3 lg:grid-cols-7"
+            >
               {skills.map((skills, index) => {
                 return (
                   <div key={index} className="w-20 text-center">

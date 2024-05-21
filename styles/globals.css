@@ -26,9 +26,16 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-body::-webkit-scrollbar {
-  display: none;
+.navBackground {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
 }
+
+body::-webkit-scrollbar {
+  scroll-behavior: smooth;
+}
+
+/** custom class and applied animations */
 
 @layer utilities {
   .menu {
@@ -103,6 +110,8 @@ body::-webkit-scrollbar {
   }
 }
 
+/** custom animations */
+
 @keyframes slideToRight {
   0% {
     transform: translateX(-100px);
@@ -167,6 +176,8 @@ body::-webkit-scrollbar {
   }
 }
 
+/** more class animations */
+
 .fade-in {
   opacity: 0;
   transition: opacity 2s ease-in-out, scale 4s ease-in-out;
@@ -190,4 +201,23 @@ body::-webkit-scrollbar {
 .slide-Bottom.visible {
   animation: slideToBottom 0.2s ease forwards;
   animation-duration: 1.5s;
+}
+
+/** projects component css */
+.scrollEffect {
+  width: calc(250px * 18);
+  animation: scrollEffect 60s linear infinite;
+}
+
+.scrollEffect:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollEffect {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 9));
+  }
 }

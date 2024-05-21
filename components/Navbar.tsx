@@ -12,7 +12,7 @@ function Navbar() {
 
   return (
     // navigation bar container
-    <div className="fixed flex justify-center items-center left-0 w-full p-12 py-16 z-10 bg-black">
+    <div className="fixed flex justify-center items-center left-0 w-full p-12 py-16 z-10 navBackground">
       {/** navbar content */}
       <nav className="absolute flex justify-between items-center w-full md:px-[180px] px-24">
         {/** navbar logo */}
