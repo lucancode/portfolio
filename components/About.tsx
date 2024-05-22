@@ -67,7 +67,7 @@ function About() {
   useFadeInOnScroll(fadeInSectionRefs);
 
   return (
-    <div className="relative top-o left-0 w-full">
+    <div className="relative top-o left-0 w-full px-16 md:px-44">
       <h2 className="mt-40 font-bold text-2xl text-center md:mt-0">About Me</h2>
       <div className="my-8">
         <div className="grid-cols-3 gap-8 justify-items-center md:grid md:grid-cols-2">

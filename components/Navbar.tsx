@@ -14,7 +14,7 @@ function Navbar() {
     // navigation bar container
     <div className="fixed flex justify-center items-center left-0 w-full p-12 py-16 z-10 navBackground">
       {/** navbar content */}
-      <nav className="absolute flex justify-between items-center w-full md:px-[180px] px-24">
+      <nav className="absolute flex justify-between items-center w-full md:px-[180px] px-16">
         {/** navbar logo */}
         <div className="logo">
           <h2 className="font-extrabold text-lg cursor-pointer md:text-2xl">

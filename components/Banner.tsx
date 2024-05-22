@@ -20,7 +20,7 @@ function Banner() {
   }, []);
 
   return (
-    <div className="relative flex justify-between items-center w-full h-dvh pt-44 md:pt-0">
+    <div className="relative flex justify-between items-center w-full h-dvh pt-44 px-16 md:px-44 md:pt-0">
       <div className=" max-w-[850px] space-y-4">
         {/** subtleText is a custom utility for keyframe animation */}
         <h3 className="text-xl font-bold subtleText md:text-2xl">Hello, My Name Is</h3>
@@ -53,7 +53,7 @@ function Banner() {
         <div className="pt-8 cvBtn">
           <a
             href="Lungelo-Ntuli-Resume.pdf"
-            className="bg-blue-400 rounded p-4 transition duration-400 ease-in-out hover:bg-blue-800 hover:bg-opacity-65"
+            className="text-sm md:text-lg bg-blue-400 rounded p-4 transition duration-400 ease-in-out hover:bg-blue-800 hover:bg-opacity-65"
           >
             Download Resume
           </a>
